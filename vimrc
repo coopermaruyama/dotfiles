@@ -154,6 +154,9 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
+" copy-paste integration
+set clipboard=unnamed
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
