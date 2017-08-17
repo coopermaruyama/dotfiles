@@ -24,8 +24,8 @@ set -g status-right-length 150
 
 # powerline for tmux
 run-shell 'source ~/.zshenv'
-set-option -g lib-dir '$LIB_DIRECTORY'
-if '[[ $LIB_DIRECTORY =~ "$HOME/lib" ]]' 'source "$HOME/lib/powerline/powerline/bindings/tmux/powerline.conf"' 'source "$HOME/lab/lib/powerline/powerline/bindings/tmux/powerline.conf'
+# set-option -g lib-dir '$LIB_DIRECTORY'
+if '[[ $LIB_DIRECTORY =~ "$HOME/lib" ]]' 'source "$HOME/lib/powerline/powerline/bindings/tmux/powerline.conf"' 'source "/usr/local/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf"'
 
 # mouse stuff
 set-window-option -g mode-mouse on
