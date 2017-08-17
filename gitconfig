@@ -12,7 +12,7 @@
   co = checkout
   st = status
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = $HOME/.gitignore
   autocrlf = input
 	editor = vim
 [commit]
