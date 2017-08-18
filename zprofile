@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='subl'
+export EDITOR='nano'
+export VISUAL='nano'
 export PAGER='less'
 
 #
@@ -36,7 +36,7 @@ fi
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
-# Set the the list of directories that cd searches.
+# Set the list of directories that cd searches.
 # cdpath=(
 #   $cdpath
 # )
@@ -61,17 +61,3 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
-
-#
-# Temporary Files
-#
-
-if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$LOGNAME"
-  mkdir -p -m 700 "$TMPDIR"
-fi
-
-TMPPREFIX="${TMPDIR%/}/zsh"
-
-# Local config
-[[ -f ~/.zprofile.local ]] && source ~/.zprofile.local
