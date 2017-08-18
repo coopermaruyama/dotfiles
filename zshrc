@@ -1,3 +1,6 @@
+# Prezto
+[[ -f ~/.zprezto/runcoms/zshrc ]] && source ~/.zprezto/runcoms/zshrc
+
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -41,11 +44,6 @@ _load_settings "$HOME/.zsh/configs"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
 
 
 source $HOME/.iterm2_shell_integration.zsh
