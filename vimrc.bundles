@@ -62,9 +62,10 @@ Plug 'elzr/vim-json'
 Plug 'kchmck/vim-coffee-script'
 Plug 'scrooloose/nerdcommenter'
 Plug 'groenewege/vim-less'
+Plug 'scrooloose/nerdtree'
 
 if g:has_async
-  Plug 'w0rp/ale'
+  " Plug 'w0rp/ale'
 endif
 
 if filereadable(expand("~/.vimrc.bundles.local"))

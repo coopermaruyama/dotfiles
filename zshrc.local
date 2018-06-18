@@ -17,3 +17,6 @@ if [ ! -S "${GPG_AGENT_INFO%%:*}" ]; then
     eval $(gpg-agent --default-cache-ttl 60480000 --daemon) > /dev/null
 fi
 export GPG_TTY=$(tty)
+
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
