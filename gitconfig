@@ -13,7 +13,7 @@
   pf = push --force-with-lease
   st = status
 [core]
-	excludesfile = $HOME/.gitignore
+	excludesfile = /Users/coopermaruyama/.gitignore_global
   autocrlf = input
 	editor = vim
 [commit]
@@ -42,7 +42,7 @@
   cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -51,3 +51,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[url "git@github.com:"]
+	insteadOf = https://github.com/

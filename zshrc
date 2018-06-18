@@ -48,3 +48,6 @@ _load_settings "$HOME/.zsh/configs"
 source $HOME/.iterm2_shell_integration.zsh
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
