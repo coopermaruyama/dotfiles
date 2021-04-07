@@ -63,6 +63,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'scrooloose/nerdcommenter'
 Plug 'groenewege/vim-less'
 Plug 'scrooloose/nerdtree'
+Plug 'w0rp/ale'
 
 if g:has_async
   " Plug 'w0rp/ale'
