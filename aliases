@@ -31,3 +31,6 @@ alias alias?='alias | grep'
 if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
 fi
+
+# change directory to git root
+alias cdr='cd "$(git rev-parse --show-toplevel)"'

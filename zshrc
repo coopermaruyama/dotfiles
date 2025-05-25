@@ -40,15 +40,28 @@ _load_settings "$HOME/.zsh/configs"
 # Prezto
 [[ -f ~/.zprezto/runcoms/zshrc ]] && source ~/.zprezto/runcoms/zshrc
 
-source $HOME/.iterm2_shell_integration.zsh
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/coopermaruyama/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/coopermaruyama/google-cloud-sdk/path.zsh.inc'; fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/coopermaruyama/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/coopermaruyama/google-cloud-sdk/completion.zsh.inc'; fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2024-11-01 19:44:34
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+
+# Created by `pipx` on 2024-11-01 20:31:15
+export PATH="$PATH:$HOME/.local/bin"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
