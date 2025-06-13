@@ -1,0 +1,9 @@
+cask 'visual-studio-code'
+cask 'warp'
+cask "google-chrome"
+cask 'font-source-code-pro'
+cask 'chatgpt'
+cask 'rectangle'
+brew 'nvm'
+brew "aircrack-ng"
+cask "tailscale"
