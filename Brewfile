@@ -1,3 +1,4 @@
+brew 'rcm'
 cask "docker"
 cask 'visual-studio-code'
 cask 'warp'
