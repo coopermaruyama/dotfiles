@@ -1,2 +1,2 @@
 # Make global node modules accessible
-export NODE_PATH=/usr/local/lib/node_modules
+export NODE_PATH="$(npm root -g):$NODE_PATH"
